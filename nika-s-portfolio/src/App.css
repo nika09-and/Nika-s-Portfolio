@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+#wholeWrap{
+  width: 100vw;
+  height: 100vh;
+  background-color: #231F20;
+}
+
+#headerWrap{
+  display: flex;
+  width: 100vw;
+  height: 90px;
+  background-color: #171616;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#headerTitle{
+  color: #1F9CEF;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+#headerLinksWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Center the links */
+  gap: 20px; /* Add consistent spacing between links */
+}
+
+.headerLink {
+  color: #ffffff;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-decoration: none;
+  width: 130px; /* Set a fixed width */
+  text-align: center; /* Center the text inside the link */
+  cursor: pointer;
+}
+
+#about{
+  width: 100px; /* Set a fixed width */
+}
+
+.angleBrackets{
+  color: #1F9CEF;
+}
+
+
+/* ======================================== firstPartWrap ======================================== */
+
+#firstPartWrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+  height: 40vh;
+  margin-top: 5vh;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-sizing: border-box;
+}
+
+#myTextWrap{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#projectsWrap{
+  width: 40%;
+  height: 100%;
+}
+
+#connectionIcons{
+  height: 100%;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+}
+
+#myText{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+  font-weight: 600;
+}
+
+.logoIcons{
+  width: 40%;
+}
+
+#hello{
+  margin: 0;
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
+#download{
+  margin: 0;
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
+#myNameWrap{
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+#name{
+  margin: 0;
+  font-size: 4em;
+  line-height: 1em;
+  color: #ffffff;
+}
+
+#prof{
+  margin: 0;
+  font-size: 2.85em;
+  line-height: 1em;
+  color: #1F9CEF;
+}
