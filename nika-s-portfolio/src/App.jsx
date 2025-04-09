@@ -12,6 +12,7 @@ function App() {
   const [isHovered, setIsHovered] = useState(false); // State to track hover status
   const aboutRef = useRef(null); // Ref for About section
   const portfolioRef = useRef(null); // Ref for Portfolio section
+  const contactsRef = useRef(null); // Ref for Contacts section
 
   const handleScrollToAbout = () => {
     if (aboutRef.current) {
@@ -25,9 +26,15 @@ function App() {
     }
   };
 
+  const handleContactsClick = () => {
+    if (contactsRef.current) {
+      contactsRef.current.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to Contacts
+    }
+  };
+
   return (
     <div id='wholeWrap'>
-      <Header onAboutClick={handleScrollToAbout} onPortfolioClick={handleScrollToPortfolio} />
+      <Header onAboutClick={handleScrollToAbout} onPortfolioClick={handleScrollToPortfolio} onContactsClick={handleContactsClick} />
       <FirstPart />
       <div id='downArrowWrap'>
         <img
@@ -44,7 +51,9 @@ function App() {
       <div ref={portfolioRef}>
         <Portfolio />
       </div>
-      <Contacts />
+      <div ref={contactsRef}>
+        <Contacts />
+      </div>
     </div>
   );
 }
