@@ -5,7 +5,6 @@ import cadeba from '../assets/cadeba.svg';
 import maxLight from '../assets/max-light-01.svg';
 import MathRush from '../assets/math-rush-01.svg';
 import palindrome from '../assets/palondrome-01.svg';
-import { address } from 'framer-motion/client';
 
 export default function Portfolio() {
   const projects = [
