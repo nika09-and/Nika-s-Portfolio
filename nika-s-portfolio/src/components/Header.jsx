@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Header() {
+export default function Header({ onAboutClick, onPortfolioClick }) {
     const [hoveredLink, setHoveredLink] = useState(null);
 
     const handleMouseEnter = (link) => {
@@ -21,6 +21,7 @@ export default function Header() {
                         id="about"
                         onMouseEnter={() => handleMouseEnter("about")}
                         onMouseLeave={handleMouseLeave}
+                        onClick={onAboutClick}
                     >
                         <span className="angleBrackets">
                             &lt;{hoveredLink === "about" ? " " : ""}
@@ -35,6 +36,7 @@ export default function Header() {
                         id="portfolio"
                         onMouseEnter={() => handleMouseEnter("portfolio")}
                         onMouseLeave={handleMouseLeave}
+                        onClick={onPortfolioClick}
                     >
                         <span className="angleBrackets">
                             &lt;{hoveredLink === "portfolio" ? " " : ""}

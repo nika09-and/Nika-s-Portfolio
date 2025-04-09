@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 body {
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
-#wholeWrap{
-  width: 100vw;
-  height: 100vh;
+#wholeWrap {
+  min-height: 100vh; /* Ensure the background extends beyond the viewport if content overflows */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
   background-color: #231F20;
 }
 
@@ -15,8 +17,8 @@ body {
   width: 100vw;
   height: 90px;
   background-color: #171616;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
   box-sizing: border-box;
   align-items: center;
   justify-content: space-between;
@@ -24,7 +26,7 @@ body {
 
 #headerTitle{
   color: #1F9CEF;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 600;
 }
 
@@ -32,12 +34,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between; /* Center the links */
-  gap: 20px; /* Add consistent spacing between links */
+  gap: 10px; /* Add consistent spacing between links */
 }
 
 .headerLink {
   color: #ffffff;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 600;
   text-decoration: none;
   width: 130px; /* Set a fixed width */
@@ -53,6 +55,9 @@ body {
   color: #1F9CEF;
 }
 
+#but{
+  font-size: 6em;
+}
 
 /* ======================================== firstPartWrap ======================================== */
 
@@ -62,7 +67,7 @@ body {
   justify-content: space-between;
   width: 100vw;
   height: 40vh;
-  margin-top: 5vh;
+  margin-top: 10vh;
   padding-left: 5%;
   padding-right: 5%;
   box-sizing: border-box;
@@ -75,10 +80,10 @@ body {
   flex-direction: row;
 }
 
-#projectsWrap{
+/* #projectsWrap{
   width: 40%;
   height: 100%;
-}
+} */
 
 #connectionIcons{
   height: 100%;
@@ -134,4 +139,401 @@ body {
   font-size: 2.85em;
   line-height: 1em;
   color: #1F9CEF;
+}
+
+#project1{
+  width: 80%;
+}
+
+#projectsWrap {
+  position: relative; /* Enable positioning for child elements */
+  width: 40%;
+  height: 300px; /* Adjust height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+#project1, #project2 {
+  position: absolute; /* Stack the images on top of each other */
+  width: 300px; /* Adjust the size of the images */
+  height: auto;
+  transition: transform 0.8s ease, opacity 0.8s ease !important; /* Smooth transitions */
+}
+
+#project1 {
+  z-index: 2; /* Place project1 on top */
+  transform: translateX(0); /* Default position */
+  width: 80%;
+  box-shadow: 0px 10px 80px rgba(31, 156, 239, 0.562); /* Add shadow to project1 */
+  border-radius: 15px;
+}
+
+#project2 {
+  z-index: 1; /* Place project2 behind project1 */
+  transform: translateY(-70px); /* Slightly offset project2 */
+  opacity: 0.6; /* Make project2 slightly transparent */
+  width: 70%;
+}
+
+#project3, #project4, #project5{
+  display: none;
+}
+
+#scrollDownButton {
+  background: none; /* Remove background color */
+  border: none; /* Remove border */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  display: inline-flex; /* Ensure the button wraps tightly around the image */
+  align-items: center; /* Center the image vertically */
+  justify-content: center; /* Center the image horizontally */
+  outline: none; /* Remove the focus outline */
+}
+
+#scrollDownButton:focus {
+  outline: none; /* Ensure no outline appears on focus */
+}
+
+/* ======================================== downArrow ======================================== */
+#downArrowWrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15vh;
+  margin-bottom: 8vh;
+  width: 100vw;
+}
+
+#downArrowWrap img{
+  cursor: pointer;
+}
+
+/* ======================================== about wrap ======================================== */
+
+#aboutWrap{
+  width: 100vw;
+  padding-left: 10%;
+  padding-right: 10%;
+  box-sizing: border-box;
+}
+
+#aboutHeaderWrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+.secondaryHeaders{
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.littleTitles{
+  font-family: 'Space Mono', monospace;
+  color: #8f8f8f;
+  font-size: 1.2em;
+  font-weight: 600;
+  z-index: 2; /* Ensure the paragraph is above the skill window */
+  position: relative; /* Required for z-index to take effect */
+}
+
+#skillsWrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 5vh;
+}
+
+#skillsIconsWrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 5vh;
+}
+
+#devSkills{
+  width: 45%;
+  box-shadow: 0px 10px 80px rgba(31, 156, 239, 0.562); /* Add shadow to project1 */
+  border-radius: 10px;
+  z-index: 1; /* Ensure the skill window is below other elements */
+}
+
+#designSkills{
+  width: 45%;
+  box-shadow: 0px 10px 80px rgba(31, 156, 239, 0.562); /* Add shadow to project1 */
+  border-radius: 10px;
+  z-index: 1; /* Ensure the skill window is below other elements */
+}
+
+/* ======================================== portfolio wrap ======================================== */
+
+#portfolioWrap{
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8vh;
+  margin-bottom: 10vh;
+}
+
+#projectWindowWrap{
+  width: 100%;
+  height: 87vh;
+  background-color: #231F20;
+  border: 1px solid #1F9CEF;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 10px 80px rgba(31, 156, 239, 0.562); /* Add shadow to project1 */
+}
+
+#projectWindowHeaderWrap{
+  width: 90%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#projectHeader{
+  color: #ffffff;
+}
+
+#projectWindowContentWrap{
+  width: 90%;
+  height: 80%;
+  overflow: hidden;
+}
+
+#projectImage{
+  width: 100%;
+}
+
+#PortfolioHeaderWrapMain{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  padding-left: 10%;
+  padding-right: 10%;
+  box-sizing: border-box;
+}
+
+#projectWindowFooterWrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+#viewButton{
+  font-size: 1.4em;
+  margin: 0;
+}
+
+#projectWrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  box-sizing: border-box;
+}
+
+#changeButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ffffff;
+  border-radius: 100%;
+  background: none;
+  outline: none;
+  font-weight: 1000;
+}
+
+#changeButton:hover{
+  background-color: #4b4b4b70;
+}
+
+#changeButtons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  position: absolute;
+  z-index: 2;
+}
+
+/* Sliding animation */
+.slideContainer {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  width: 100%;
+}
+
+.slideContainer.right {
+  animation: slideRight 0.4s ease;
+}
+
+.slideContainer.left {
+  animation: slideLeft 0.4s ease;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+/* ======================================== contacts ======================================== */
+
+#contactsWrap{
+  width: 100vw;
+  padding-left: 10%;
+  padding-right: 10%;
+  box-sizing: border-box;
+  background-color: #171616;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#leftContactsWrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+  width: 45%;
+}
+
+#rightContactsWrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+  width: 45%;
+  background-color: #231F20;
+  border: 1px solid #1F9CEF;
+  border-radius: 20px;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  box-sizing: border-box;
+}
+
+#contactsInfoWrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#contactsIconsWrap{
+  display: flex;
+  flex-direction: row;
+  gap: 3%;
+}
+
+#contactsInfo{
+  margin: 0; 
+}
+
+#contactsInfo2{
+  margin-top: 0; 
+}
+
+.inputs{
+  background-color: #171616;
+  border: none;
+  font-family: 'Space Mono', monospace;
+  color: #8f8f8f;
+  font-size: 1em;
+  font-weight: 600;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.inputs:focus{
+  outline:#1F9CEF solid 1px;
+}
+
+#nameInput,#emailInput{
+  height: 15%;
+  border-radius: 15px;
+}
+
+#messageInput{
+  height: 30%;
+  border-radius: 15px;
+  padding-top: 2%;
+  resize: none;
+}
+
+/* Custom scrollbar for WebKit-based browsers (Chrome, Edge, Safari) */
+#messageInput::-webkit-scrollbar {
+  width: 20px; /* Width of the scrollbar */
+}
+
+#messageInput::-webkit-scrollbar-track {
+  background: #171616; /* Background color of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+#messageInput::-webkit-scrollbar-thumb {
+  background: #1F9CEF; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+#messageInput::-webkit-scrollbar-thumb:hover {
+  background: #1477c9; /* Darker color on hover */
+}
+
+/* Custom scrollbar for Firefox */
+#messageInput {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #1F9CEF #171616; /* Thumb color and track color */
+}
+
+#send{
+  margin: 0;
+}
+
+#getInTouch{
+  margin: 0;
 }
