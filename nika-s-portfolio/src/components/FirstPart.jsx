@@ -9,6 +9,7 @@ import project4 from "../assets/project 4.svg";
 import project5 from "../assets/project 5.svg";
 import scroll from "../assets/scroll button.svg";
 import scrollHover from "../assets/scroll button active.svg"; // Import the hover image
+import portfolioFile from "../assets/ნიკა.ანდრიაძე(front-end დეველოპერი)cv.pdf"; // Import your portfolio file
 
 export default function FirstPart() {
     const [activeProject, setActiveProject] = useState(0); // 0 = project1, 1 = project2, 2 = project3, etc.
@@ -48,11 +49,11 @@ export default function FirstPart() {
                         <p id="name">NIKA ANDRIADZE</p>
                         <p id="prof">FRONT-END DEVELOPER</p>
                     </div>
-                    <p id="download">
+                    <a href={portfolioFile} download="Nika_Andriadze_Portfolio.pdf" id="download">
                         <span className="angleBrackets">&lt;</span>
                         DOWNLOAD CV
                         <span className="angleBrackets">&gt;</span>
-                    </p>
+                    </a>
                 </div>
             </div>
             <div id="firstRightWrap">
