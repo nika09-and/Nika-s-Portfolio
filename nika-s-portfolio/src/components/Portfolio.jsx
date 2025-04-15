@@ -12,7 +12,7 @@ export default function Portfolio() {
     { title: 'Project 2', subTitle: '//Cadeba', description: '//A 2D strategy mobile game where players use character cards with unique powers and weaknesses to gather resources, build structures, and outplay opponents', image: cadeba, address: 'https://nika09-and.github.io/cadebaTheGame/' },
     { title: 'Project 3', subTitle: '//Max Light', description: '//A custom JavaScript-powered website with a sleek, interactive interface, showcasing projects with smooth transitions and dynamic visuals.', image: maxLight, address: 'https://nika09-and.github.io/webProject-inProgress-/' },
     { title: 'Project 4', subTitle: '//Math Rush', description: '//A fast-paced game that challenges players with quick-fire math problems and score tracking.', image: MathRush, address: 'https://nika09-and.github.io/MathRush/' },
-    { title: 'Project 5', subTitle: '//Palindrome Checker', description: 'Description 5', image: palindrome, address: 'https://nika09-and.github.io/Palindrome_Checker/' },
+    { title: 'Project 5', subTitle: '//Palindrome Checker', description: 'A palindrome is a word or sentence that spelled the same way both forward and backward, ignoring punctuation, case, and spacing', image: palindrome, address: 'https://nika09-and.github.io/Palindrome_Checker/' },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
