@@ -55,24 +55,25 @@ export default function FirstPart() {
                     </p>
                 </div>
             </div>
+            <div id="firstRightWrap">
+                <div id="projectsWrap">
+                    {/* Now rendering all 5 projects */}
+                    <img src={projects[activeProject]} alt="Project" id="project1" />
+                    <img src={projects[(activeProject + 1) % 5]} alt="Project" id="project2" />
+                    <img src={projects[(activeProject + 2) % 5]} alt="Project" id="project3" />
+                    <img src={projects[(activeProject + 3) % 5]} alt="Project" id="project4" />
+                    <img src={projects[(activeProject + 4) % 5]} alt="Project" id="project5" />
+                </div>
 
-            <div id="projectsWrap">
-                {/* Now rendering all 5 projects */}
-                <img src={projects[activeProject]} alt="Project" id="project1" />
-                <img src={projects[(activeProject + 1) % 5]} alt="Project" id="project2" />
-                <img src={projects[(activeProject + 2) % 5]} alt="Project" id="project3" />
-                <img src={projects[(activeProject + 3) % 5]} alt="Project" id="project4" />
-                <img src={projects[(activeProject + 4) % 5]} alt="Project" id="project5" />
+                <button
+                    id="scrollDownButton"
+                    onClick={handleScroll}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <img src={scrollImage} alt="scroll" id="scroll" />
+                </button>
             </div>
-
-            <button
-                id="scrollDownButton"
-                onClick={handleScroll}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-            >
-                <img src={scrollImage} alt="scroll" id="scroll" />
-            </button>
         </div>
     );
 }

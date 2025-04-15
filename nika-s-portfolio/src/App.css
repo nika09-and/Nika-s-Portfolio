@@ -59,6 +59,73 @@ body {
   font-size: 6em;
 }
 
+/* Dropdown menu for mobile view */
+#mobileHeader {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+#dropdownIcon {
+    display: block;
+    cursor: pointer;
+    width: 30px; /* Adjust size as needed */
+}
+
+#dropdownMenu {
+    display: flex;
+    flex-direction: column;
+    background-color: #171616; /* Match header background */
+    position: absolute;
+    top: 90px; /* Position below the header */
+    right: 10%; /* Align with header padding */
+    width: 200px; /* Adjust width as needed */
+    border: 1px solid #1F9CEF;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+#dropdownMenu .headerLink {
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#dropdownMenu .headerLink:hover {
+    background-color: #1F9CEF;
+    color: #171616;
+}
+
+/* Hide dropdown icon and show header links for larger screens */
+@media (min-width: 751px) {
+    #dropdownIcon {
+        display: none;
+    }
+
+    #headerLinksWrap {
+        display: flex;
+    }
+}
+
+/* Hide header links and show dropdown icon for smaller screens */
+@media (max-width: 750px) {
+    #headerLinksWrap {
+        display: none;
+    }
+}
+
+/* Remove hover background color for links under 750px */
+@media (max-width: 750px) {
+    #dropdownMenu .headerLink:hover {
+        background-color: transparent; /* Remove background color */
+        color: #ffffff; /* Ensure text color remains consistent */
+    }
+}
+
 /* ======================================== firstPartWrap ======================================== */
 
 #firstPartWrap{
@@ -147,8 +214,7 @@ body {
 
 #projectsWrap {
   position: relative; /* Enable positioning for child elements */
-  width: 40%;
-  height: 300px; /* Adjust height as needed */
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -356,6 +422,14 @@ body {
   box-sizing: border-box;
 }
 
+#firstRightWrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
 #changeButton{
   display: flex;
   justify-content: center;
@@ -552,11 +626,6 @@ body {
   outline: none; /* Ensure no outline appears on focus */
 }
 
-/* Remove hover styles */
-#sendButton:hover {
-  /* No styles applied on hover */
-}
-
 #contactForm{
   display: flex;
   flex-direction: column;
@@ -564,3 +633,154 @@ body {
   height: 100%;
   padding-top: 2%;
 }
+
+
+/*======================================== responsive sizees ========================================*/
+
+@media (max-width: 1500px) {
+  #changeButtons{
+    width: 80%;
+    position: relative;margin-top: 30px;
+  }
+
+  #projectWindowWrap{
+    height: 75vh;
+  }
+}
+
+
+@media (max-width: 1260px) {
+  #firstPartWrap{
+    flex-direction: column;
+    height: 100vh;
+    margin-top: 0;
+    align-items: center;
+    justify-content: start;
+  }
+
+  #downArrowWrap{
+    display: none;
+  }
+
+  #myTextWrap{
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+  }
+
+  #projectsWrap{
+    width: 70%;
+    height: 50%;
+    margin-top: 10vh;
+    justify-content: center;
+    margin: 0;
+    margin-top: 15vh;
+  }
+
+  #firstRightWrap{
+    width: 100%;
+    justify-content: center;
+    height: auto;
+  }
+
+  #scrollDownButton{
+    margin-top: 2vh;
+  }
+
+  #projectWindowWrap{
+    height: 60vh;
+  }
+}
+
+@media (max-width: 1000px){
+  #skillsIconsWrap{
+    flex-direction: column;
+    width: 100%;
+    gap: 5vh;
+  }
+
+  #designSkills,#devSkills{
+    width: 100%;
+  }
+
+  #projectWindowWrap{
+    height: 50vh;
+  }
+
+  #contactsWrap{
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 5vh;
+  }
+
+  #rightContactsWrap{
+    width: 100%;
+  }
+
+  #leftContactsWrap{
+    width: 100%;
+    justify-content: start;
+    height: 50%;
+  }
+
+  
+}
+
+@media (max-width: 750px){
+  #name{
+    font-size: 3em;
+  }
+
+  #prof{
+    font-size: 2.13em;
+  }
+
+  #viewButton{
+    font-size: 1.2em;
+  }
+
+  #projectSubHeader{
+    font-size: 1em;
+  }
+
+  #projectWindowWrap{
+    height: 40vh;
+  }
+
+  #projectsWrap{
+    width: 90%;
+  }
+
+  #projectHeader{
+    font-size: 1em;
+  }
+
+  #projectSubHeader{
+    font-size: 0.8em;
+  }
+
+  #contactsInfo{
+    font-size: 0.8em;
+  }
+  #contactsInfo2{
+    font-size: 0.8em;
+  }
+
+  #aboutMe{
+    font-size: 0.8em;
+  }
+}
+/*
+#firstPartWrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+  height: 40vh;
+  margin-top: 10vh;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-sizing: border-box;
+}
+*/

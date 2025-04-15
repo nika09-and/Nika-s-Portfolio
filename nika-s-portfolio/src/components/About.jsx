@@ -11,7 +11,7 @@ const About = forwardRef((props, ref) => {
                 </p>
                 <p className="littleTitles">//Skills</p>
             </div>
-            <p className="littleTitles">
+            <p className="littleTitles" id="aboutMe">
                 // I’m a passionate Front-End Developer with a keen eye for design and a love for crafting seamless, interactive web 
                 <br />// experiences. With expertise in HTML, CSS, JavaScript, and modern frameworks like React and Vue.js, I specialize   
                 <br />// in building responsive, user-friendly interfaces that bring ideas to life.
