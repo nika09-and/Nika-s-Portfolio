@@ -8,25 +8,25 @@ import project3 from "../assets/project 3.svg";
 import project4 from "../assets/project 4.svg";
 import project5 from "../assets/project 5.svg";
 import scroll from "../assets/scroll button.svg";
-import scrollHover from "../assets/scroll button active.svg"; // Import the hover image
-import portfolioFile from "../assets/ნიკა.ანდრიაძე(front-end დეველოპერი)cv.pdf"; // Import your portfolio file
+import scrollHover from "../assets/scroll button active.svg";
+import portfolioFile from "../assets/ნიკა.ანდრიაძე(front-end დეველოპერი)cv.pdf";
 
 export default function FirstPart() {
-    const [activeProject, setActiveProject] = useState(0); // 0 = project1, 1 = project2, 2 = project3, etc.
-    const [scrollImage, setScrollImage] = useState(scroll); // State to track the current scroll image
+    const [activeProject, setActiveProject] = useState(0);
+    const [scrollImage, setScrollImage] = useState(scroll);
 
-    const projects = [project1, project2, project3, project4, project5]; // Now we have all 5 projects
+    const projects = [project1, project2, project3, project4, project5];
 
     const handleScroll = () => {
-        setActiveProject((prev) => (prev + 1) % 5); // Use modulo 5 to loop through the 5 images
+        setActiveProject((prev) => (prev + 1) % 5);
     };
 
     const handleMouseEnter = () => {
-        setScrollImage(scrollHover); // Change to hover image on mouse enter
+        setScrollImage(scrollHover);
     };
 
     const handleMouseLeave = () => {
-        setScrollImage(scroll); // Revert to default image on mouse leave
+        setScrollImage(scroll);
     };
 
     return (
@@ -58,7 +58,7 @@ export default function FirstPart() {
             </div>
             <div id="firstRightWrap">
                 <div id="projectsWrap">
-                    {/* Now rendering all 5 projects */}
+                    {/* Displaying the projects in a circular manner */}
                     <img src={projects[activeProject]} alt="Project" id="project1" />
                     <img src={projects[(activeProject + 1) % 5]} alt="Project" id="project2" />
                     <img src={projects[(activeProject + 2) % 5]} alt="Project" id="project3" />

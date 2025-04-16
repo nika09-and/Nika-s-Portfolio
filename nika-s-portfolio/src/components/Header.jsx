@@ -7,15 +7,15 @@ export default function Header({ onAboutClick, onPortfolioClick, onContactsClick
     const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 750);
 
     const handleMouseEnter = (link) => {
-        setHoveredLink(link); // Set the hovered link
+        setHoveredLink(link); 
     };
 
     const handleMouseLeave = () => {
-        setHoveredLink(null); // Reset the hovered link
+        setHoveredLink(null); 
     };
 
     const toggleDropdown = () => {
-        setIsDropdownOpen((prev) => !prev); // Toggle dropdown visibility
+        setIsDropdownOpen((prev) => !prev); 
     };
 
     useEffect(() => {

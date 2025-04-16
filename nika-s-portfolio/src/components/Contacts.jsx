@@ -22,17 +22,17 @@ export default function Contacts() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validation: Check if all fields are filled
+
     if (!formData.name || !formData.email || !formData.message) {
       alert("Please fill in all fields before sending.");
-      return; // Stop form submission
+      return;
     }
 
     emailjs.send(
-      "service_y62ag4a",       // 🔁 Replace this
-      "template_mmj41d7",      // 🔁 Replace this
+      "service_y62ag4a",
+      "template_mmj41d7",
       formData,
-      "lWYD1MCrGKCnk7XQ7"        // 🔁 Replace this (no more user ID!)
+      "lWYD1MCrGKCnk7XQ7"
     ).then(
       () => {
         alert("Message sent successfully!");
